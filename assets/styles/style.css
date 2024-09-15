@@ -99,8 +99,7 @@ img{
 /* Header styling */
 
 header{
-    margin-left: 1rem;
-    margin-right: 1rem;
+    
 
 }
 
@@ -111,14 +110,27 @@ header{
     align-items: center;
     justify-content: space-between;
     position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
     padding: .5rem 0rem 0rem;
 }
 
+@media screen and (max-width:480px) {
+    header{
+        height: 50px;
+        box-shadow: 0px 2px  4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo{
+        width: 50px;
+    }
+}
 
 .menu{
     display: block;
     position: relative;
     width: 200px;
+    margin-right: 40px;
 }
 
 .menu > li > a{
@@ -282,6 +294,18 @@ header{
 }
 
 @media (max-width: 480px) {
+    .hero-container{
+    flex-direction: column;
+
+    }
+
+    .hero-description{
+        width: 100%;
+    }
+
+    .hero-description button{
+    }
+
     .hero-description h1{
         font-size: var(--h2-font-size);
     }
